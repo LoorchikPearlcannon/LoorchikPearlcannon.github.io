@@ -1,6 +1,6 @@
 (() => {
-  const model = window.CANNON_MODEL;
-  const canvas = document.getElementById('cannonScene');
+  const model = { size: [0, 0, 0], blocks: [] };
+  const canvas = document.createElement('canvas');
   const backgroundVideo = document.querySelector('.scene-video');
   const ctx = canvas.getContext('2d');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -54,8 +54,8 @@
   canvas.addEventListener('pointermove',e=>{if(dragging){angle+=(e.clientX-lastX)*0.008;lastX=e.clientX}});
   canvas.addEventListener('pointerup',()=>dragging=false);canvas.addEventListener('pointercancel',()=>dragging=false);
   function startModelFallback(){document.querySelector('.scene').classList.add('model-fallback');addEventListener('resize',resize);resize();requestAnimationFrame(render)}
-  if(backgroundVideo) backgroundVideo.addEventListener('error',startModelFallback,{once:true});
-  else startModelFallback();
+  if (backgroundVideo) { backgroundVideo.muted = true; backgroundVideo.play().catch(() => {}); }
+  else {}
 
   const tests=[[1000,7,5],[2000,18.5,4],[3000,17,6],[4000,20,2],[5000,22,7],[6000,27,3],[7000,30,8],[8000,33,1],[9000,36,9],[10000,39,10]];
   const $=id=>document.getElementById(id);let mode='items',source='per';

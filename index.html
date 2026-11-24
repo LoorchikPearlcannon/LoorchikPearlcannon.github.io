@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101714">
+  <meta name="description" content="Plan your Loorchik's Pearl Cannon launch with block distance calculations and measured travel times.">
+  <title>Loorchik's Pearl Cannon | Launch calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene" aria-hidden="true"><video class="scene-video" autoplay muted loop playsinline preload="auto"><source src="https://github.com/jornyx409-glitch/Loorchik-s-Pearl-Cannon-Website/releases/download/v1.0.0/cannon-orbit.mp4" type="video/mp4"><source src="cannon-orbit.mp4" type="video/mp4"></video><canvas id="cannonScene"></canvas><div class="scene-shade"></div><div class="scene-grid"></div></div>
+  <header class="topbar"><a class="brand" href="#top"><span class="brand-mark">✳</span><span>LOORCHIK<span class="brand-muted"> / PEARL CANNON</span></span></a><nav><a href="#calculator">Calculator</a></nav><span class="status"><i></i> MACHINE MODEL LOADED</span></header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><h1>Loorchik's<br><em>Pearl Cannon.</em></h1><p class="lede">A flight calculator for Loorchik's Pearl Cannon.</p><div class="hero-actions"><a class="button primary" href="#calculator">Open calculator <span>↘</span></a></div></div>
+      <div class="model-label"><span class="label-dot"></span> LOORCHIK'S PEARL CANNON</div>
+      <div class="scroll-hint"><span></span> SCROLL TO PLAN</div>
+    </section>
+    <section class="calculator-section" id="calculator"><div class="section-heading"><p class="eyebrow">01 / FLIGHT PLANNER</p><h2>Set your <em>launch.</em></h2></div>
+      <div class="calc-shell"><div class="calc-left"><div class="mode-tabs" role="tablist"><button class="mode active" data-mode="items" role="tab" aria-selected="true">Items → Distance</button><button class="mode" data-mode="distance" role="tab" aria-selected="false">Distance → Items</button></div>
+        <div class="form-block" id="itemsForm"><label>Calculate from</label><div class="segmented"><button class="source active" data-source="per">Items per dispenser</button><button class="source" data-source="chest">Input chest total</button></div><label class="input-label" for="amount" id="amountLabel">ITEMS PER DISPENSER</label><div class="number-field"><input id="amount" type="number" min="1" step="1" value="32" inputmode="numeric"><span id="amountUnit">items</span></div><p class="field-hint" id="amountHint">The input chest needs twice this amount.</p></div>
+        <div class="form-block hidden" id="distanceForm"><label class="input-label" for="targetDistance">TARGET DISTANCE</label><div class="number-field"><input id="targetDistance" type="number" min="1" step="1" value="4000" inputmode="numeric"><span>blocks</span></div></div>
+        <div class="quick-picks"><span>QUICK SET</span><button data-items="16">2,000 blocks</button><button data-items="32">4,000 blocks</button><button data-items="64">8,000 blocks</button></div>
+      </div><div class="result-panel"><div class="result-top"><span>LAUNCH SUMMARY</span><span class="result-icon">↗</span></div><div class="distance-result"><span>PROJECTED DISTANCE</span><strong id="distanceOut">4,000 <small>blocks</small></strong><div class="distance-bar"><span></span></div></div><div class="result-stats"><div><span>ITEMS PER DISPENSER</span><strong id="perOut">32</strong></div><div><span>INPUT CHEST TOTAL</span><strong id="totalOut">64</strong></div></div><div class="time-box"><div class="time-head"><span>TRAVEL TIME</span><span id="timeTag" class="tag measured">MEASURED</span></div><strong id="timeOut">20 <small>sec</small></strong><p id="timeNote">Measured at 4,000 blocks · Test 2</p></div></div></div>
+      <div class="social-strip" aria-label="Loorchik social links"><span class="social-label">FOLLOW LOORCHIK</span><a href="https://www.tiktok.com/@loorchik" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 3c.6 2.8 2.2 4.2 5 4.4v3.2a9 9 0 0 1-5-1.7v6.2a6.1 6.1 0 1 1-6.1-6.1c.5 0 1 .1 1.5.2v3.3a2.9 2.9 0 1 0 1.4 2.5V3h3.2Z"/></svg>TikTok</a><a href="https://www.youtube.com/@LoorchIK" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.3 3.7-6.3 3.7Z"/></svg>YouTube</a><a href="https://discord.gg/74D3YuMSD" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.1A18 18 0 0 0 15.3 4l-.5 1a16 16 0 0 0-5.6 0l-.5-1a18 18 0 0 0-4.4 1.1C1.5 9.2.8 13.2 1.2 17.1a18 18 0 0 0 5.4 2.7l1.2-2a11 11 0 0 1-1.9-.9l.5-.4a13 13 0 0 0 11.2 0l.5.4-1.9.9 1.2 2a18 18 0 0 0 5.4-2.7c.5-4.5-.8-8.5-3.1-12Zm-9.2 9.6c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm5 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg>Discord</a></div>
+    </section>
+    <footer><a class="brand" href="#top"><span class="brand-mark">✳</span><span>LOORCHIK<span class="brand-muted"> / PEARL CANNON</span></span></a><a href="#top">BACK TO TOP ↑</a></footer>
+  </main><script src="cannon-model.js"></script><script src="app.js"></script>
+</body></html>
+
